@@ -13,7 +13,9 @@ public class Car_Chapter15 {
 	
 	//メソッド記入
 	public void gearChange(int afterGear) {
+		int beforeGear = this.gear;
 		this.gear = afterGear;
+		
 		switch(gear) {
 		case 1 : speed = 10;break;
 		case 2 : speed = 20;break;
@@ -23,7 +25,7 @@ public class Car_Chapter15 {
 		default: speed = 10;break;
 	
 		}
-		System.out.println("ギア" + gear + "に切り替わりました");
+		System.out.println("ギア" + beforeGear + "から" + afterGear +  "に切り替わりました");
 		
 	}
 	public void run() {
